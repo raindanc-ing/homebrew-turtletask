@@ -7,14 +7,14 @@ cask "turtletask" do
   desc "Spotlight-style palette for the TurtleTask task board"
   homepage "https://turtletask.app/"
 
-  depends_on macos: ">= :catalina"
+  depends_on macos: :catalina
 
   app "TurtleTask.app"
 
   zap trash: [
     "~/Library/Application Support/app.turtletask.desktop",
     "~/Library/Caches/app.turtletask.desktop",
-    "~/Library/WebKit/app.turtletask.desktop",
     "~/Library/Saved Application State/app.turtletask.desktop.savedState",
+    "~/Library/WebKit/app.turtletask.desktop",
   ]
 end
