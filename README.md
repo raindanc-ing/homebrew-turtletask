@@ -1,9 +1,21 @@
 # TurtleTask Desktop — Homebrew tap
 
 A Spotlight-style palette for the [TurtleTask](https://turtletask.app) task
-board: a global hotkey opens one input; type to search, `#17` to jump, `>` to
-add a task from one line (`>Fix login @chen project:atlas 3d mon p1`). It
-signs in by browser handoff and acts as you.
+board: a global hotkey opens one input; type to search, `#17` to jump, or
+add a task from one line:
+
+    "Fix login redirect" @chen "Platform" "Atlas" 3
+
+Title in quotes, then who, team, project, working days; the preview shows
+every slot and offers the organisation's real names as you type (Tab picks).
+It signs in by browser handoff and acts as you.
+
+## Hotkey
+
+Cmd+Shift+Space on macOS, Ctrl+Shift+Space elsewhere; change it under the
+gear in the palette. On a Linux Wayland desktop (Ubuntu, Fedora) use
+**Bind in GNOME** on that screen, which writes a system shortcut for the app;
+other desktops bind `turtletask-desktop --toggle` to a key themselves.
 
 ## Install (macOS)
 
