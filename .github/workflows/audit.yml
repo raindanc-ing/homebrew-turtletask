@@ -1,0 +1,18 @@
+name: Audit cask
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  audit:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Audit the cask, once there is one
+        run: |
+          if [ ! -f Casks/turtletask.rb ]; then echo "no cask yet"; exit 0; fi
+          tap="$(brew --repository)/Library/Taps/raindanc-ing/homebrew-turtletask"
+          mkdir -p "$(dirname "$tap")" && ln -s "$PWD" "$tap"
+          brew style raindanc-ing/turtletask/turtletask
+          brew audit --cask --online --strict raindanc-ing/turtletask/turtletask
