@@ -8,7 +8,7 @@ signs in by browser handoff and acts as you.
 ## Install (macOS)
 
 ```
-brew tap raindanc-ing/turtletask
+brew tap reindance/turtletask
 brew install --cask turtletask
 ```
 
@@ -18,7 +18,7 @@ without any warning. Upgrade with `brew upgrade --cask turtletask`.
 ## Windows and Linux
 
 The installers (`.exe`, `.AppImage`, `.deb`, `.rpm`) are attached to each
-[release](https://github.com/raindanc-ing/homebrew-turtletask/releases).
+[release](https://github.com/reindance/homebrew-turtletask/releases).
 
 ## What is here
 
