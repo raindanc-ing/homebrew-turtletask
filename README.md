@@ -12,16 +12,8 @@ brew tap raindanc-ing/turtletask
 brew install --cask turtletask
 ```
 
-Until the builds are notarised, macOS will refuse to open a downloaded app it
-cannot verify. Either install with the quarantine flag left off:
-
-```
-brew install --cask --no-quarantine turtletask
-```
-
-or right-click the app once and choose **Open**.
-
-Upgrade with `brew upgrade --cask turtletask`.
+The app is signed with a Developer ID and notarised by Apple, so it opens
+without any warning. Upgrade with `brew upgrade --cask turtletask`.
 
 ## Windows and Linux
 
