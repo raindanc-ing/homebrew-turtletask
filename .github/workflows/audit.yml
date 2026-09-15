@@ -10,9 +10,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Audit the cask, once there is one
+        # brew audit --online asks the GitHub API about the release; from a
+        # shared runner address the anonymous limit is 60 an hour.
+        env:
+          HOMEBREW_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           if [ ! -f Casks/turtletask.rb ]; then echo "no cask yet"; exit 0; fi
-          tap="$(brew --repository)/Library/Taps/raindanc-ing/homebrew-turtletask"
+          tap="$(brew --repository)/Library/Taps/reindance/homebrew-turtletask"
           mkdir -p "$(dirname "$tap")" && ln -s "$PWD" "$tap"
-          brew style raindanc-ing/turtletask/turtletask
-          brew audit --cask --online --strict raindanc-ing/turtletask/turtletask
+          brew style reindance/turtletask/turtletask
+          brew audit --cask --online --strict reindance/turtletask/turtletask
