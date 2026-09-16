@@ -1,6 +1,6 @@
 cask "turtletask" do
-  version "0.2.0"
-  sha256 "e950dbba42e1c3a329fe6a4575e558a5e2b085c9f9860eb3ac8cfa0e916f65e4"
+  version "0.2.1"
+  sha256 "0f1c1235ae19c1a254b9a8ce4551c1883fd49a3a2f796fae4d7585ceeb1a9600"
 
   url "https://github.com/reindance/homebrew-turtletask/releases/download/desktop-v#{version}/TurtleTask_#{version}_universal.dmg"
   name "TurtleTask"
@@ -9,7 +9,7 @@ cask "turtletask" do
 
   # The app updates itself; brew upgrade leaves it alone. macOS only, with
   # no version floor: Homebrew removes the symbols for the versions it no
-  # longer supports (`:catalina` broke installs on 2026-09-16), and any
+  # longer supports ( broke installs on 2026-09-16), and any
   # macOS that can run a current Homebrew can run the app.
   auto_updates true
   depends_on :macos
