@@ -2,6 +2,10 @@ name: Audit cask
 
 on:
   push:
+    # Branches only: the release action tags the commit *before* the cask
+    # is regenerated, so an audit at the tag would always compare the old
+    # cask with the new release and fail for no reason.
+    branches: ['**']
   pull_request:
 
 jobs:
