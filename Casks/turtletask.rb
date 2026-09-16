@@ -1,12 +1,14 @@
 cask "turtletask" do
-  version "0.1.0"
-  sha256 "9f030a744e5bc49c2f673c42506e96dcfb5bdc0ff1c85de73880ad024c94056b"
+  version "0.2.0"
+  sha256 "e950dbba42e1c3a329fe6a4575e558a5e2b085c9f9860eb3ac8cfa0e916f65e4"
 
   url "https://github.com/reindance/homebrew-turtletask/releases/download/desktop-v#{version}/TurtleTask_#{version}_universal.dmg"
   name "TurtleTask"
   desc "Spotlight-style palette for the TurtleTask task board"
   homepage "https://turtletask.app/"
 
+  # The app updates itself; brew upgrade leaves it alone.
+  auto_updates true
   depends_on macos: :catalina
 
   app "TurtleTask.app"
