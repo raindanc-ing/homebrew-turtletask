@@ -25,7 +25,9 @@ brew install --cask turtletask
 ```
 
 The app is signed with a Developer ID and notarised by Apple, so it opens
-without any warning. Upgrade with `brew upgrade --cask turtletask`.
+without any warning. From 0.2.0 it updates itself: it checks for a new
+version after launch and offers to install and relaunch, so `brew upgrade`
+leaves it alone (the cask says so).
 
 ## Windows and Linux
 
