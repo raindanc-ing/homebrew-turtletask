@@ -7,11 +7,12 @@ cask "turtletask" do
   desc "Spotlight-style palette for the TurtleTask task board"
   homepage "https://turtletask.app/"
 
-  # The app updates itself; brew upgrade leaves it alone. No macOS floor is
-  # declared: Homebrew removes the symbols for the versions it no longer
-  # supports (`:catalina` broke installs on 2026-09-16), and any macOS that
-  # can run a current Homebrew can run the app.
+  # The app updates itself; brew upgrade leaves it alone. macOS only, with
+  # no version floor: Homebrew removes the symbols for the versions it no
+  # longer supports (`:catalina` broke installs on 2026-09-16), and any
+  # macOS that can run a current Homebrew can run the app.
   auto_updates true
+  depends_on :macos
 
   app "TurtleTask.app"
 
